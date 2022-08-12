@@ -1,0 +1,27 @@
+{
+    "continue": "Continue",
+    "create_game": "Create Game",
+    "settings": "Settings",
+    "language": "Language",
+    "rules": {
+        "title": "Rules",
+        "text": {
+            "1": "The leader creates a game for the players by choosing the number of players",
+            "2": "After creating the game, the leader shows each player his QR code, the player must scan it to get his number in the game.",
+            "3": "Players do not need to know who has which number, all players know only their number, obtained by scanning the QR-code, the leader also does not know the numbers of players.",
+            "4": "After clicking on the 'Start' button, you will see numbers, these are pairs that perform tasks from the leader",
+            "5": "The leader puts the task or question to his or her discretion when a player hears his or her number, shows it to other players, and waits for the leader to announce the other player's number."
+        }
+    },
+    "scan_qr": "Scan QR",
+
+
+    "players": "Players",
+    "yes": "Yes",
+    "no": "No",
+    "are_you_play?": "Are you play?",
+    "qr_codes": "QR Codes",
+    "start": "Start",
+    "new_game": "New Game",
+    "you": "You"
+}
