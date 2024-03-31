@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:Vermax/consts.dart';
 
 class NumberScreen extends StatefulWidget {
-  String number;
+  final String number;
 
   NumberScreen({
     Key? key,

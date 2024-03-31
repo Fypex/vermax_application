@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
 class Button extends StatelessWidget {
-  String name;
-  double width;
-  Function()? onPressed;
+  final String name;
+  final double width;
+  final Function()? onPressed;
 
   Button({
     Key? key,
@@ -16,9 +16,9 @@ class Button extends StatelessWidget {
   Widget build(BuildContext context) {
     return TextButton(
       style: TextButton.styleFrom(
+        foregroundColor: Colors.white,
         backgroundColor: Colors.black12,
         padding: const EdgeInsets.all(16.0),
-        primary: Colors.white,
         textStyle: const TextStyle(fontSize: 20),
       ),
       onPressed: onPressed,

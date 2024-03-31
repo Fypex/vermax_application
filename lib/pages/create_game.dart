@@ -1,7 +1,5 @@
-import 'dart:ffi';
 import 'dart:math';
 import 'package:easy_localization/easy_localization.dart';
-import 'package:localstorage/localstorage.dart';
 import 'package:sliding_switch/sliding_switch.dart';
 import 'package:flutter/material.dart';
 import 'package:Vermax/buttons/button.dart';
@@ -60,18 +58,21 @@ class _CreateGameScreenState extends State<CreateGameScreen> {
           ),
           Column(
             children: [
-              Slider(
-                value: _amountPlayers,
-                activeColor: Colors.white,
-                inactiveColor: const Color.fromARGB(255, 46, 58, 140),
-                min: 4,
-                max: 20,
-                divisions: 8,
-                onChanged: (double value) {
-                  setState(() {
-                    _amountPlayers = value;
-                  });
-                },
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 20),
+                child: Slider(
+                  value: _amountPlayers,
+                  activeColor: Colors.white,
+                  inactiveColor: const Color.fromARGB(255, 46, 58, 140),
+                  min: 4,
+                  max: 20,
+                  divisions: 8,
+                  onChanged: (double value) {
+                    setState(() {
+                      _amountPlayers = value;
+                    });
+                  },
+                ),
               ),
               const SizedBox(height: 20),
               Text(
@@ -102,21 +103,24 @@ class _CreateGameScreenState extends State<CreateGameScreen> {
                 inactiveColor: const Color.fromARGB(255, 255, 255, 255),
               ),
               const SizedBox(height: 50),
-              Button(
-                name: 'continue'.tr(),
-                width: MediaQuery.of(context).size.width,
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => QrCodesPage(
-                        amount: _amountPlayers.toInt(),
-                        leading: _leading_player,
-                        seed: _random_seed,
+              Padding(
+                padding: const EdgeInsets.all(12.0),
+                child: Button(
+                  name: 'continue'.tr(),
+                  width: MediaQuery.of(context).size.width,
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => QrCodesPage(
+                          amount: _amountPlayers.toInt(),
+                          leading: _leading_player,
+                          seed: _random_seed,
+                        ),
                       ),
-                    ),
-                  );
-                },
+                    );
+                  },
+                ),
               ),
             ],
           )

@@ -1,10 +1,8 @@
 import 'dart:convert';
-import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_barcode_scanner/flutter_barcode_scanner.dart';
-import 'package:qr_flutter/qr_flutter.dart';
 import 'package:Vermax/buttons/button.dart';
 import 'package:Vermax/consts.dart';
 import 'package:Vermax/pages/couples.dart';
@@ -48,7 +46,7 @@ class _HomePageState extends State<HomePage> {
   }
 
   Widget build(BuildContext context) {
-    var _game = 0;
+
     var _game_info;
 
     final LocalStorage storage = LocalStorage('storage');

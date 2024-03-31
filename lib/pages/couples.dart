@@ -1,5 +1,3 @@
-import 'dart:ffi';
-
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:localstorage/localstorage.dart';
@@ -7,8 +5,8 @@ import 'package:Vermax/buttons/button.dart';
 import 'package:Vermax/consts.dart';
 
 class CouplesScreen extends StatefulWidget {
-  List couples;
-  int leader;
+  final List couples;
+  final int leader;
 
   CouplesScreen({
     Key? key,

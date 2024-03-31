@@ -10,10 +10,9 @@ import 'package:Vermax/consts.dart';
 import 'package:Vermax/pages/couples.dart';
 
 class QrCodesPage extends StatefulWidget {
-  num amount;
-  bool leading;
-  int seed;
-  int _totalPages = 0;
+  final num amount;
+  final bool leading;
+  final int seed;
 
   QrCodesPage({
     Key? key,
@@ -128,7 +127,7 @@ class _QrCodesPageState extends State<QrCodesPage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            QrImage(
+            QrImageView(
               foregroundColor: Colors.white,
               backgroundColor: Colors.black,
               data: player.toString(),
