@@ -1,3 +1,4 @@
+import 'package:Vermax/pages/home_page.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:localstorage/localstorage.dart';
@@ -116,6 +117,12 @@ class _CouplesScreenState extends State<CouplesScreen> {
                           final LocalStorage storage = LocalStorage('storage');
                           storage.deleteItem('game');
                           Navigator.pushReplacementNamed(context, '/');
+                          Navigator.pushReplacement(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => HomePage(),
+                            ),
+                          );
                         },
                       ),
                       if (widget.leader > 0)
