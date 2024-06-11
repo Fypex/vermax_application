@@ -51,7 +51,8 @@ dev_dependencies:
 flutter_icons:
   android: "launcher_icon"
   ios: true
-  image_path: "assets/vermax.png"
+  image_path: "assets/vermax.jpg"
+  remove_alpha_ios: true
   
 flutter_native_splash:
   color: "#3949ab"
